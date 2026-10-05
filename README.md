@@ -81,6 +81,9 @@ Há limitações. Nenhum detector elimina completamente a injeção de prompt, e
 
 Quanto ao esforço de implementação, estimo que um protótipo funcional seja viável em poucas semanas por uma equipe pequena, usando bases vetoriais que já oferecem filtragem por metadados e integração com o provedor de identidade existente. O maior esforço está em etapas menos visíveis: classificar e etiquetar o acervo de documentos, calibrar os filtros para equilibrar segurança e usabilidade, e manter o monitoramento contínuo. Eu começaria pelo filtro de permissão e pela auditoria, que têm o melhor custo-benefício, e só depois adicionaria o scanner de ingestão e as guardas de entrada e saída.
 
+Esta atividade foi um aprofundamento muito útil em um assunto que já havia despertado meu interesse em outra aula do módulo, na qual pesquisamos repositórios do Hugging Face que pudessem ser úteis ao projeto do metrô. Naquela aula, encontrei o [NER model in the legal domain in Portuguese (LeNER-Br)](https://huggingface.co/pierreguillou/ner-bert-base-cased-pt-lenerbr) e, a partir daí, passei a trazer para o grupo a preocupação com a segurança, guiada pela LGPD, e as soluções possíveis para ela. O principal desafio foi entender, de forma concreta, quais camadas do sistema precisariam desse tratamento, onde ele fazia sentido e onde era realmente necessário. Esta atividade trouxe grande clareza nesse ponto, pois me mostrou como o problema pode ser tratado no nível da arquitetura e definir que é preciso controlar quem acessa o quê, o que entra no contexto da LLM e como a resposta final é montada. Foram esse desafio e essa curiosidade que guiaram meu estudo e a proposta deste trabalho.
+
+
 ---
 
 ## 4. Referências Bibliográficas
